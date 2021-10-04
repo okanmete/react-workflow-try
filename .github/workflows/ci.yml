@@ -38,6 +38,3 @@ jobs:
 
     - name: Build
       run: yarn run build
-
-    - name: Run ESLint
-      run: eslint . --ext .js,.jsx,.ts,.tsx
