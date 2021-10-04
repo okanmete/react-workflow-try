@@ -31,6 +31,12 @@ jobs:
           **/node_modules
         key: ${{ runner.os }}-${{ hashFiles('**/package-lock.json') }}
 
+      env:
+        REACT_APP_OKTA_CLIENT_ID: ${{ secrets.DEV_OKTA_CLIENT_ID }}
+        REACT_APP_OKTA_ISSUER: ${{ secrets.DEV_OKTA_ISSUER }}
+        REACT_APP_OKTA_REDIRECT: ${{ secrets.DEV_OKTA_REDIRECT }}
+        REACT_APP_DRIVER_PAYOUT_API: ${{ secrets.DEV_DRIVER_PAYOUT_API }}
+
     - name: Install dependencies
       run: yarn install
 
